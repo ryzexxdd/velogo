@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VeloGo – Прокат велосипедов в Шымкенте</title>
+    <meta name="description" content="VeloGo - первый прокат на велодорожке в Шымкенте. Более 600 отзывов, 50+ велосипедов для всех возрастов. Вода в подарок!">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="#">
+                    <div class="logo-circle">
+                        <span>VELOGO</span>
+                    </div>
+                </a>
+            </div>
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-link">О нас</a></li>
+                    <li><a href="#features" class="nav-link">Преимущества</a></li>
+                    <li><a href="#bikes" class="nav-link">Велосипеды</a></li>
+                    <li><a href="#contacts" class="nav-link">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="https://wa.me/77056350707" class="btn btn-outline" target="_blank"><i class="fa-brands fa-whatsapp"></i> Бронь</a>
+                <button class="mobile-toggle" id="mobile-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Top White Hero Section with Rays -->
+    <section class="hero" id="home">
+        <!-- Abstract Animated Background -->
+        <div class="blob-bg">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+            <div class="blob blob-4"></div>
+            <div class="blob blob-5"></div>
+        </div>
+        
+        <div class="container hero-container">
+            <div class="hero-content" data-aos="zoom-in" data-aos-duration="1200">
+                <span class="badge">Номер 1 в Шымкенте</span>
+                <h1 class="hero-title">Катайтесь с удовольствием по паркам и маршрутам!</h1>
+                <p class="hero-subtitle">VeloGo – самая первая компания на главной велодорожке Шымкента. Мы дарим теплую атмосферу и яркие эмоции уже 2 года.</p>
+                <div class="hero-buttons">
+                    <a href="https://2gis.kz/shymkent/geo/70000001093533387" target="_blank" class="btn btn-primary btn-lg">
+                        <i class="fa-solid fa-location-dot"></i> Мы в 2GIS
+                    </a>
+                    <a href="https://www.instagram.com/velogo_shymkent" target="_blank" class="btn btn-outline btn-lg">
+                        <i class="fa-brands fa-instagram"></i> Instagram
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="wave-bottom">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="#2435E5" opacity=".25"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5V0Z" fill="#2435E5" opacity=".5"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="#2435E5"></path>
+            </svg>
+        </div>
+    </section>
+
+    <div class="blue-bg-wrap">
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">600+</span>
+                        <span class="stat-text">Довольных отзывов</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-text">Свежих велосипедов</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">2 года</span>
+                        <span class="stat-text">Идеального сервиса</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about section" id="about">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="text-white">О компании <span>VeloGo</span></h2>
+                    <p class="text-white-50">Мы предлагаем больше, чем просто велосипеды. Мы предлагаем отличный отдых.</p>
+                </div>
+                <div class="about-grid">
+                    <div class="about-image" data-aos="fade-right">
+                        <div class="image-wrapper">
+                            <!-- Using local photo added by user -->
+                            <img src="velogo.png" alt="Велосипеды VeloGo">
+                            <div class="experience-badge">
+                                <span class="exp-years">2</span>
+                                <span class="exp-text">Года<br>Опыта</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-text text-white" data-aos="fade-left">
+                        <h3>Первые на велодорожке Шымкента</h3>
+                        <p>VeloGo – это не просто прокат. Это место, где вас всегда встретят с улыбкой. Наши вежливые сотрудники помогут вам подобрать идеальный велосипед для любой поездки.</p>
+                        <ul class="feature-list">
+                            <li><i class="fa-solid fa-check-circle"></i> Огромный выбор: от детских до взрослых</li>
+                            <li><i class="fa-solid fa-check-circle"></i> Всегда исправные и чистые велосипеды</li>
+                            <li><i class="fa-solid fa-check-circle"></i> Теплая, дружественная атмосфера</li>
+                            <li><i class="fa-solid fa-check-circle"></i> Работаем каждый день с 13:00 до 01:00</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bonus Section -->
+        <section class="bonus section" id="features">
+            <div class="container">
+                <div class="bonus-card" data-aos="zoom-in">
+                    <div class="bonus-content">
+                        <h3>Приятный бонус от VeloGo! 💧</h3>
+                        <p>Мы заботимся о наших клиентах. После активного катания каждому клиенту мы дарим <strong>бесплатную бутылочку воды 0.5л</strong>, чтобы вы могли утолить жажду и освежиться.</p>
+                        <a href="#contacts" class="btn btn-primary">Приехать к нам</a>
+                    </div>
+                    <div class="bonus-image">
+                        <!-- Using local photo added by user -->
+                        <img src="velogo1.png" alt="Вода в подарок">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bikes Section -->
+        <section class="bikes section" id="bikes">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="text-white">Наши <span>Велосипеды</span></h2>
+                    <p class="text-white-50">Более 50+ велосипедов для любого возраста и роста.</p>
+                </div>
+                <div class="bikes-grid">
+                    <div class="bike-card" data-aos="fade-up" data-aos-delay="0">
+                        <div class="bike-icon"><i class="fa-solid fa-child-reaching"></i></div>
+                        <h4>Детские</h4>
+                        <p>Безопасные и удобные велосипеды для самых маленьких. Идеально подходят для обучения и первых поездок.</p>
+                    </div>
+                    <div class="bike-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="bike-icon"><i class="fa-solid fa-person-biking"></i></div>
+                        <h4>Подростковые</h4>
+                        <p>Стильные и маневренные модели для активных подростков. Легкая рама и надежные тормоза.</p>
+                    </div>
+                    <div class="bike-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="bike-icon"><i class="fa-solid fa-bicycle"></i></div>
+                        <h4>Взрослые</h4>
+                        <p>Комфортные городские и горные велосипеды для прогулок по паркам и велодорожкам.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacts Section (No Map) -->
+        <section class="contacts section" id="contacts">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="text-white">Как нас <span>Найти</span></h2>
+                    <p class="text-white-50">Мы находимся в самом удобном месте для старта вашего маршрута.</p>
+                </div>
+                <div class="contact-box" data-aos="fade-up">
+                    <div class="contact-info">
+                        <div class="info-card">
+                            <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div>
+                                <h4>Адрес</h4>
+                                <p>г. Шымкент, Байдибек Би 75</p>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+                            <div>
+                                <h4>Время работы</h4>
+                                <p>Каждый день с 13:00 до 01:00</p>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div>
+                                <h4>Бронирование</h4>
+                                <p>+7 (705) 635-07-07<br>+7 (777) 776-70-70</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-actions">
+                        <div class="action-buttons">
+                            <a href="https://2gis.kz/shymkent/geo/70000001093533387" target="_blank" class="btn btn-light-glow"><i class="fa-solid fa-map-location-dot"></i> Открыть в 2GIS</a>
+                            <a href="https://wa.me/77056350707" target="_blank" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> Написать в WhatsApp</a>
+                        </div>
+                        <div class="social-links mt-4">
+                            <p>Мы в соцсетях:</p>
+                            <a href="https://www.instagram.com/velogo_shymkent" target="_blank" class="social-icon instagram"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container footer-container">
+                <div class="footer-logo">
+                    <div class="logo-circle">
+                        <span>VELOGO</span>
+                    </div>
+                    <p>Первый прокат с душой.</p>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; <script>document.write(new Date().getFullYear())</script> VeloGo. Все права защищены.</p>
+                </div>
+                <a href="#home" class="scroll-top"><i class="fa-solid fa-chevron-up"></i></a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
