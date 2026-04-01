@@ -30,13 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
             if (navMenu.classList.contains('active')) {
                 icon.classList.remove('fa-bars');
                 icon.classList.add('fa-xmark');
-                icon.style.color = '#1E293B'; // dark color for close button
+                icon.style.color = '#FFFFFF'; // white because the menu is now dark blue
             } else {
                 icon.classList.remove('fa-xmark');
                 icon.classList.add('fa-bars');
-                if (window.scrollY <= 50) {
-                    icon.style.color = '#FFFFFF';
-                }
+                icon.style.color = ''; // reset to default
             }
         });
     }

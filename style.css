@@ -803,14 +803,14 @@ h1, h2, h3, h4, h5, h6 {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 300px;
+        width: 100%;
         height: 100vh;
-        background: var(--white);
-        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        background: rgba(15, 32, 91, 0.95); /* Deep premium dark blue */
+        backdrop-filter: blur(20px);
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: var(--transition);
+        transition: right 0.4s cubic-bezier(0.25, 1, 0.5, 1);
         z-index: 999;
     }
 
@@ -821,17 +821,27 @@ h1, h2, h3, h4, h5, h6 {
     .nav-list {
         flex-direction: column;
         text-align: center;
+        gap: 40px;
     }
 
     .nav-link {
-        color: var(--text-dark);
-        font-size: 1.25rem;
+        color: var(--white);
+        font-size: 2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    
+    .nav-link::after {
+        background-color: #8BE9FD; /* bright underline on dark menu */
     }
     
     .mobile-toggle {
         display: block;
-        z-index: 1000;
+        position: relative; /* REQUIRED for z-index to work */
+        z-index: 1005; /* Puts it above the fullscreen nav-menu */
         color: var(--text-dark);
+        font-size: 2rem;
     }
     
     .header-actions .btn {
