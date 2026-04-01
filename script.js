@@ -114,21 +114,31 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(statsContainer);
     }
 
-    // Booking Modal Logic
-    const openBookingBtn = document.getElementById('open-booking');
-    const closeBookingBtn = document.getElementById('close-booking');
+    // Unified Booking Modal Logic
     const bookingModal = document.getElementById('booking-modal');
+    const closeBookingBtn = document.getElementById('close-booking');
     const bookingForm = document.getElementById('booking-form');
+    // Multiple buttons open the same modal
+    const bookingButtons = [
+        document.getElementById('open-booking'),
+        document.getElementById('header-booking')
+    ];
 
-    if (openBookingBtn && bookingModal && closeBookingBtn) {
-        openBookingBtn.addEventListener('click', () => {
-            bookingModal.classList.add('active');
-            document.body.style.overflow = 'hidden'; // Stop scrolling
+    if (bookingModal && closeBookingBtn && bookingForm) {
+        
+        bookingButtons.forEach(btn => {
+            if(btn) {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    bookingModal.classList.add('active');
+                    document.body.style.overflow = 'hidden'; 
+                });
+            }
         });
 
         const closeModal = () => {
             bookingModal.classList.remove('active');
-            document.body.style.overflow = ''; // Resume scrolling
+            document.body.style.overflow = '';
         };
 
         closeBookingBtn.addEventListener('click', closeModal);
@@ -154,9 +164,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const name = document.getElementById('user-name').value;
             const count = document.getElementById('bike-count').value;
             const time = document.getElementById('booking-time').value;
+            const duration = document.getElementById('booking-duration').value;
             
             const phoneNumber = '77777767070'; // +7 (777) 776-70-70
-            const message = `Здравствуйте! Я хочу забронировать велосипед.\n\n👤 Имя: ${name}\n🚲 Количество: ${count}\n⏰ Время: ${time}`;
+            const message = `Здравствуйте! Я хочу забронировать велосипед.\n\n👤 Имя: ${name}\n🚲 Количество: ${count}\n⏰ Время: ${time}\n⏳ Длительность: ${duration}`;
             
             const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
             
