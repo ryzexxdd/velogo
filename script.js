@@ -113,4 +113,56 @@ document.addEventListener('DOMContentLoaded', () => {
     if (statsContainer) {
         observer.observe(statsContainer);
     }
+
+    // Booking Modal Logic
+    const openBookingBtn = document.getElementById('open-booking');
+    const closeBookingBtn = document.getElementById('close-booking');
+    const bookingModal = document.getElementById('booking-modal');
+    const bookingForm = document.getElementById('booking-form');
+
+    if (openBookingBtn && bookingModal && closeBookingBtn) {
+        openBookingBtn.addEventListener('click', () => {
+            bookingModal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Stop scrolling
+        });
+
+        const closeModal = () => {
+            bookingModal.classList.remove('active');
+            document.body.style.overflow = ''; // Resume scrolling
+        };
+
+        closeBookingBtn.addEventListener('click', closeModal);
+
+        // Close on escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && bookingModal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+
+        // Close on clicking outside
+        bookingModal.addEventListener('click', (e) => {
+            if (e.target === bookingModal) {
+                closeModal();
+            }
+        });
+
+        // Form Submission to WhatsApp
+        bookingForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('user-name').value;
+            const count = document.getElementById('bike-count').value;
+            const time = document.getElementById('booking-time').value;
+            
+            const phoneNumber = '77777767070'; // +7 (777) 776-70-70
+            const message = `Здравствуйте! Я хочу забронировать велосипед.\n\n👤 Имя: ${name}\n🚲 Количество: ${count}\n⏰ Время: ${time}`;
+            
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            
+            window.open(whatsappUrl, '_blank');
+            closeModal();
+            bookingForm.reset();
+        });
+    }
 });
