@@ -272,20 +272,20 @@ h1, h2, h3, h4, h5, h6 {
     filter: blur(140px); /* Massive blur for fluid mixing */
     border-radius: 50%;
     animation: moveBlob infinite alternate cubic-bezier(0.5, 0, 0.5, 1);
-    mix-blend-mode: multiply; /* Helps colors mix beautifully against a white background */
+    /* Removed blend mode to keep colors light and text completely readable */
 }
 
-/* Base blobs */
+/* Base blobs - Lowered Opacities strictly below 0.15 for super light reading environment */
 .blob-1 {
     width: 600px; height: 600px;
-    background: rgba(26, 66, 229, 0.5); /* Primary Blue */
+    background: rgba(26, 66, 229, 0.1); /* Primary Blue */
     top: -150px; left: -150px;
     animation-duration: 25s;
 }
 
 .blob-2 {
     width: 500px; height: 500px;
-    background: rgba(139, 233, 253, 0.6); /* Cyan/Blue twist */
+    background: rgba(139, 233, 253, 0.15); /* Cyan/Blue twist */
     bottom: -100px; right: -100px;
     animation-duration: 20s;
     animation-delay: -5s;
@@ -293,7 +293,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .blob-3 {
     width: 700px; height: 700px;
-    background: rgba(74, 99, 255, 0.4); /* Lighter Blue */
+    background: rgba(74, 99, 255, 0.1); /* Lighter Blue */
     top: 20%; left: 40%;
     animation-duration: 30s;
     animation-delay: -10s;
@@ -301,7 +301,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .blob-4 {
     width: 450px; height: 450px;
-    background: rgba(0, 180, 216, 0.5); /* Another nice teal/blue */
+    background: rgba(0, 180, 216, 0.1); /* Another nice teal/blue */
     top: 50%; left: -50px;
     animation-duration: 22s;
     animation-delay: -15s;
@@ -309,7 +309,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .blob-5 {
     width: 550px; height: 550px;
-    background: rgba(0, 31, 153, 0.4); /* Deep Dark Blue for contrast */
+    background: rgba(0, 31, 153, 0.08); /* Deep Dark Blue for contrast */
     top: 10%; right: 10%;
     animation-duration: 28s;
     animation-delay: -3s;
@@ -692,6 +692,13 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--text-muted);
 }
 
+.social-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
 .social-icon {
     display: inline-flex;
     align-items: center;
@@ -705,6 +712,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .social-icon.instagram {
     background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.social-icon.tiktok {
+    background: #111111;
 }
 
 .social-icon:hover {
@@ -726,6 +737,12 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: 30px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     margin-bottom: 20px;
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ensures logo sits exactly in the center above the text */
 }
 
 .footer-logo p {
@@ -849,6 +866,10 @@ h1, h2, h3, h4, h5, h6 {
 
     .social-links {
         text-align: left;
+    }
+
+    .social-buttons {
+        justify-content: flex-start;
     }
 
     .hero-buttons {
