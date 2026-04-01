@@ -164,10 +164,24 @@ document.addEventListener('DOMContentLoaded', () => {
             const name = document.getElementById('user-name').value;
             const count = document.getElementById('bike-count').value;
             const time = document.getElementById('booking-time').value;
-            const duration = document.getElementById('booking-duration').value;
+            const durationInput = document.getElementById('booking-duration').value;
             
+            // Pluralization for Russian 'Hour'
+            let durationFormatted = durationInput;
+            const num = parseInt(durationInput.replace(/\D/g, ''));
+            
+            if (!isNaN(num)) {
+                let suffix = 'часов';
+                if (num % 10 === 1 && num % 100 !== 11) {
+                    suffix = 'час';
+                } else if ([2, 3, 4].includes(num % 10) && ![12, 13, 14].includes(num % 100)) {
+                    suffix = 'часа';
+                }
+                durationFormatted = `${num} ${suffix}`;
+            }
+
             const phoneNumber = '77777767070'; // +7 (777) 776-70-70
-            const message = `Здравствуйте! Я хочу забронировать велосипед.\n\n👤 Имя: ${name}\n🚲 Количество: ${count}\n⏰ Время: ${time}\n⏳ Длительность: ${duration}`;
+            const message = `Здравствуйте! Я хочу забронировать велосипед.\n\n👤 Имя: ${name}\n🚲 Количество: ${count}\n⏰ Время: ${time}\n⏳ Длительность: ${durationFormatted}`;
             
             const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
             
