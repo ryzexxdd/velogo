@@ -62,15 +62,18 @@
         
         <div class="container hero-container">
             <div class="hero-content" data-aos="zoom-in" data-aos-duration="1200">
-                <span class="badge"><i class="fa-solid fa-location-dot"></i> Байдибек Би 75 • Дендропарк</span>
-                <h1 class="hero-title">VeloGo – Дендропарк</h1>
-                <p class="hero-subtitle"><strong>Катайтесь с удовольствием по паркам и маршрутам!</strong><br>VeloGo – самая первая компания на главной велодорожке Шымкента (ул. Байдибек Би 75). Мы дарим теплую атмосферу и яркие эмоции уже 2 года.</p>
+                <span class="badge"><i class="fa-solid fa-tree-city"></i> Парк Shym City • Шымкент</span>
+                <h1 class="hero-title">VeloGo – Парк Shym City</h1>
+                <p class="hero-subtitle"><strong>Катайтесь с удовольствием по паркам и маршрутам!</strong><br>VeloGo – самая первая компания на главной велодорожке Шымкента (Парк Shym City). Мы дарим теплую атмосферу и яркие эмоции уже 2 года.</p>
                 <div class="hero-buttons">
                     <button class="btn btn-primary btn-lg btn-booking" id="open-booking">
                         <i class="fa-solid fa-calendar-check"></i> Забронировать Велосипед
                     </button>
                     <a href="https://2gis.kz/shymkent/geo/70000001093533387" target="_blank" class="btn btn-outline btn-lg">
                         <i class="fa-solid fa-location-dot"></i> Мы в 2GIS
+                    </a>
+                    <a href="https://velogokids.vercel.app/" target="_blank" class="btn btn-outline btn-lg btn-dendro">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> VeloGo - Дендропарк
                     </a>
                 </div>
             </div>
@@ -267,6 +270,13 @@
                 <p>Заполните данные, и мы подготовим всё к вашему приезду!</p>
             </div>
             <form id="booking-form" class="booking-form">
+                <div class="form-group">
+                    <label for="booking-location">В какую точку собираетесь приехать?</label>
+                    <select id="booking-location" required>
+                        <option value="Байдибек би 75">Байдибек би 75</option>
+                        <option value="Парк Shym City">Парк Shym City</option>
+                    </select>
+                </div>
                 <div class="form-group">
                     <label for="user-name">Ваше имя</label>
                     <input type="text" id="user-name" placeholder="Например, Арман" required>

@@ -156,6 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
         bookingForm.addEventListener('submit', (e) => {
             e.preventDefault();
             
+            const location = document.getElementById('booking-location').value;
             const name = document.getElementById('user-name').value;
             const count = document.getElementById('bike-count').value;
             const time = document.getElementById('booking-time').value;
@@ -176,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             const phoneNumber = '77056350707'; // +7 (705) 635-07-07
-            const message = `Здравствуйте! Я хочу забронировать велосипед.\n\n👤 Имя: ${name}\n🚲 Количество: ${count}\n⏰ Время: ${time}\n⏳ Длительность: ${durationFormatted}`;
+            const message = `Здравствуйте! Я хочу забронировать велосипед.\n\n📍 Локация: ${location}\n👤 Имя: ${name}\n🚲 Количество: ${count}\n⏰ Время: ${time}\n⏳ Длительность: ${durationFormatted}`;
             
             const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
             
