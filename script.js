@@ -119,21 +119,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeBookingBtn = document.getElementById('close-booking');
     const bookingForm = document.getElementById('booking-form');
     // Multiple buttons open the same modal
-    const bookingButtons = [
-        document.getElementById('open-booking'),
-        document.getElementById('header-booking')
-    ];
+    const bookingButtons = document.querySelectorAll('#open-booking, #header-booking, .btn-booking');
 
     if (bookingModal && closeBookingBtn && bookingForm) {
         
         bookingButtons.forEach(btn => {
-            if(btn) {
-                btn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    bookingModal.classList.add('active');
-                    document.body.style.overflow = 'hidden'; 
-                });
-            }
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                bookingModal.classList.add('active');
+                document.body.style.overflow = 'hidden'; 
+            });
         });
 
         const closeModal = () => {
@@ -180,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 durationFormatted = `${num} ${suffix}`;
             }
 
-            const phoneNumber = '77777767070'; // +7 (777) 776-70-70
+            const phoneNumber = '77056350707'; // +7 (705) 635-07-07
             const message = `Здравствуйте! Я хочу забронировать велосипед.\n\n👤 Имя: ${name}\n🚲 Количество: ${count}\n⏰ Время: ${time}\n⏳ Длительность: ${durationFormatted}`;
             
             const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
